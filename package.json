@@ -1,0 +1,62 @@
+{
+  "name": "marked-extension-template",
+  "version": "0.0.0",
+  "description": "marked extension template",
+  "main": "./lib/index.cjs",
+  "module": "./src/index.js",
+  "browser": "./lib/index.umd.js",
+  "type": "module",
+  "keywords": [
+    "marked",
+    "extension"
+  ],
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:cover": "jest --coverage",
+    "lint": "eslint .",
+    "build": "rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markedjs/marked-extension-template.git"
+  },
+  "author": "Tony Brix <Tony@Brix.ninja> (https://Tony.Brix.ninja)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markedjs/marked-extension-template/issues"
+  },
+  "homepage": "https://github.com/markedjs/marked-extension-template#readme",
+  "peerDependencies": {
+    "marked": "^7.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.4",
+    "@semantic-release/npm": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^11.0.4",
+    "babel-jest": "^29.5.0",
+    "eslint": "^8.47.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "jest-cli": "^29.6.2",
+    "marked": "^7.0.2",
+    "rollup": "^3.28.0",
+    "semantic-release": "^21.0.7"
+  }
+}
